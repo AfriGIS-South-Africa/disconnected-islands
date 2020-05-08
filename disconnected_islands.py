@@ -314,7 +314,7 @@ class DisconnectedIslands(object):
                 
                 self.iface.messageBar().pushMessage("Finding connected subgraphs, please wait...",  level=Qgis.Warning)     # WARNING - to highlight the next stage, where we cannot show progress
                 QApplication.processEvents()
-                connected_components = list(nx.connected_component_subgraphs(G))    # this takes a long time.  TODO: how to show progress?
+                connected_components = list(G.subgraph(c) for c in nx.connected_components(G)) # this takes a long time.  TODO: how to show progress?
                 self.iface.messageBar().pushMessage("Updating group attribute...",  level=Qgis.Info)
                 QApplication.processEvents()
                           
