@@ -11,7 +11,7 @@
 name=Disconnected Islands
 qgisMinimumVersion=3.0
 description=Finds disconnected "islands" in a transport network layer, so that a routing tool will work between all nodes. A tolerance field allows for imperfect topology.
-version=2.0.1
+version=2.0.2
 author=Peter Smythe @ AfriGIS
 email=peters@afrigis.co.za
 
@@ -29,7 +29,9 @@ repository=https://github.com/AfriGIS-South-Africa/disconnected-islands.git
 # Recommended items:
 
 # Uncomment the following line and add your changelog:
-changelog=Version 2.0.1 (2018-12-06)
+changelog=Version 2.0.2 (2020-11-24)
+    - Fix for NetworkX.connected_component_subgraphs removed in v2.4<br/>
+    Version 2.0.1 (2018-12-06)
     - Update tracker to GitHub, sample data path<br/>
     Version 2.0.0 (2018-11-30)
     - Upgrade to QGIS v3<br/>
